@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="/custom/url/css/style.css">
+    </head>
+    <body class="rojo">
+
+        <h1 id="azul">Hola coders</h1>
+        <h2 class="rojo negrita">Esto es un subtitulo</h2>
+        <h3>Esto es un subtitulo</h3>
+        
+
+        <img src="/custom/url/images/gato.jpg" alt="Imagen de gato" width="600">
+
+        <button id="boton">boton</button>
+
+
+        <h3>Formulario 1</h3>
+        <form action="/uploadfile" enctype="multipart/form-data" method="post">
+            <input type="file" name="myFile">
+            <input type="submit" value="Upload a file">
+        </form>
+
+        <h3>Formulario 2</h3>
+    
+        <form action="/uploadmultiple" enctype="multipart/form-data" method="post">
+            Select images <input type="file" name="myFiles" multiple/>
+            <input type="submit" value="Upload your files">
+        </form>
+
+
+        <h3>Formulario productos</h3>
+    
+        <form action="/api/productos" method="post">
+            <input type="text" name="nombre">
+            <input type="number" name="precio">
+            <input type="submit" value="Submit a product">
+        </form>
+
+
+        <script src="/custom/url/js/index.js"></script>
+    </body>
+</html>
