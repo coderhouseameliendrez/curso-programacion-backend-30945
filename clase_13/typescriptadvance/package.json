@@ -1,0 +1,18 @@
+{
+  "name": "typescriptadvance",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": ".\\node_modules\\.bin\\tsc",
+    "watch": ".\\node_modules\\.bin\\tsc -w",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.6.3"
+  }
+}
