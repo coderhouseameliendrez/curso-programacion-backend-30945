@@ -2,11 +2,20 @@ const express = require('express')
 const { Router } = express
 const filmsRouter = Router()
 
-// const { UserDaoFile } = require('../daos/usuarios/PeliculaDaoFile')
-// const userDao = new PeliculaDaoFile()
+// const { PeliculaDaoFile } = require('../daos/usuarios/PeliculaDaoFile')
+// const filmDao = new PeliculaDaoFile()
 
-//const { UserDaoMongo } = require('../daos/usuarios/PeliculaDaoMongo')
-//const userDao = new PeliculaDaoMongo()
+//const { PeliculaDaoMongo } = require('../daos/usuarios/PeliculaDaoMongo')
+//const filmDao = new PeliculaDaoMongo()
 
 const { PeliculaDaoFirestore } = require('../daos/peliculas/PeliculaDaoFirestore')
-const userDao = new PeliculaDaoFirestore()
+const filmDao = new PeliculaDaoFirestore()
+
+// ACA VAN MIS RUTAS A '/api/peliculas'
+
+filmsRouter.get('/', async (req, res) => {
+  let films = await filmDao.getAll();
+  res.json({films: films})
+})
+
+module.exports = filmsRouter

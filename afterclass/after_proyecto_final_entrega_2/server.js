@@ -1,11 +1,13 @@
 const express = require('express');
 const app = express();
 const userRouter = require('./src/routes/usuario.js');
+const filmsRouter = require('./src/routes/peliculas.js')
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
 app.use('/api/users', userRouter);
+app.use('/api/peliculas', filmsRouter);
 
 app.listen(8080, () => {
     console.log('Server on port 8080');
