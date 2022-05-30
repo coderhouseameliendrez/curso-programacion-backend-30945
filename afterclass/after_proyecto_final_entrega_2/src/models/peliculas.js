@@ -1,15 +1,13 @@
 const mongoose = require("mongoose");
 
-const usuariosCollection = 'usuarios';
+const peliculasCollection = 'peliculas';
 
-const UsuarioSchema = new mongoose.Schema({
-    nombre: {type: String, required: true, max: 100},
-    apellido: {type: String, required: true, max: 100},
-    email: {type: String, required: true, max: 100},
-    usuario: {type: String, required: true, max: 100},
-    password: {type: Number, required: true}
+const PeliculaSchema = new mongoose.Schema({
+    titulo: {type: String, required: true, max: 100},
+    director: {type: String, required: true, max: 100},
+    duracion: {type: Number, required: true}
 })
 
-const usuarios = mongoose.model(usuariosCollection, UsuarioSchema);
+const peliculas = mongoose.model(peliculasCollection, PeliculaSchema);
 
-module.exports = usuarios
+module.exports = peliculas
