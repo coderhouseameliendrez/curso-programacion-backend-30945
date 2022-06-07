@@ -49,11 +49,11 @@ class ContenedorMemoria {
         fs.writeFileSync(this.fileName, JSON.stringify(content));
     }
 
-    actualizar(content, id) {
+    actualizar(content) {
         let contentArray = this.listarTodos();
 
-        let index = obcontentArrayjArr.findIndex(elem => {
-            return elem.id === id;
+        let index = contentArray.findIndex(elem => {
+            return elem.id === content.id;
         });
 
         if (index != -1) {

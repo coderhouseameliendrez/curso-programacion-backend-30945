@@ -54,9 +54,9 @@ router.post('/', async (req, res, next) => {
 
 router.put('/:id', async (req, res, next) => {
     try {
-        res.json(await apiUsuarios.actualizar({...req.body, id:req.params.id}));
+        res.json(await apiUsuarios.actualizar({...req.body, id: req.params.id}))
     } catch (error) {
-        next(error);
+        next(error)
     }
 })
 
