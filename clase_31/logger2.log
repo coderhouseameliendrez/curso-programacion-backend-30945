@@ -1,0 +1,7 @@
+[2022-07-11T21:45:27.532] [INFO] archivo2 - Log info
+[2022-07-11T21:45:27.534] [WARN] archivo2 - Log warn
+[2022-07-11T21:45:27.534] [ERROR] archivo2 - Log error
+[2022-07-11T21:45:27.534] [FATAL] archivo2 - Log fatal
+
+
+
